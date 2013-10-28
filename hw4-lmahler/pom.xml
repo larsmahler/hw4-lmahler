@@ -123,4 +123,8 @@
 			</plugin>
 		</plugins>
 	</build>
+	<scm>
+		<connection>scm:git:git@github.com:larsmahler/hw4-lmahler.git</connection>
+		<developerConnection>scm:git:git@github.com:larsmahler/hw4-lmahler.git</developerConnection>
+	</scm>
 </project>
