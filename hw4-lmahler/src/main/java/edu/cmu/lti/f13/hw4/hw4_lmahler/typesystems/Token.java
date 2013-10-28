@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Thu Oct 24 14:40:24 EDT 2013
+ * Updated by JCasGen Mon Oct 28 14:09:53 EDT 2013
  * XML source: C:/Users/Lars/git/hw4-lmahler/hw4-lmahler/src/main/resources/descriptors/typesystems/VectorSpaceTypes.xml
  * @generated */
 public class Token extends Annotation {
@@ -65,14 +65,14 @@ public class Token extends Annotation {
   //*--------------*
   //* Feature: text
 
-  /** getter for text - gets 
+  /** getter for text - gets lemmatized text of the token
    * @generated */
   public String getText() {
     if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_text == null)
       jcasType.jcas.throwFeatMissing("text", "edu.cmu.lti.f13.hw4.hw4_lmahler.typesystems.Token");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Token_Type)jcasType).casFeatCode_text);}
     
-  /** setter for text - sets  
+  /** setter for text - sets lemmatized text of the token 
    * @generated */
   public void setText(String v) {
     if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_text == null)
@@ -83,14 +83,14 @@ public class Token extends Annotation {
   //*--------------*
   //* Feature: frequency
 
-  /** getter for frequency - gets 
+  /** getter for frequency - gets frequency of the lemmatized text (stopwords excluded)
    * @generated */
   public int getFrequency() {
     if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_frequency == null)
       jcasType.jcas.throwFeatMissing("frequency", "edu.cmu.lti.f13.hw4.hw4_lmahler.typesystems.Token");
     return jcasType.ll_cas.ll_getIntValue(addr, ((Token_Type)jcasType).casFeatCode_frequency);}
     
-  /** setter for frequency - sets  
+  /** setter for frequency - sets frequency of the lemmatized text (stopwords excluded) 
    * @generated */
   public void setFrequency(int v) {
     if (Token_Type.featOkTst && ((Token_Type)jcasType).casFeat_frequency == null)

@@ -8,7 +8,9 @@ import org.apache.uima.jcas.JCas;
 
 import edu.cmu.lti.f13.hw4.hw4_lmahler.typesystems.Document;
 
-
+/**
+ * Extracts the query id, "relevant" value, and text from each document.
+ */
 public class DocumentReader 
 extends JCasAnnotator_ImplBase  {
 	

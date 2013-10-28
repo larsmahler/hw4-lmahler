@@ -11,8 +11,8 @@ import org.apache.uima.jcas.cas.FSList;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
-/** 
- * Updated by JCasGen Thu Oct 24 14:40:24 EDT 2013
+/** a document (query or answer)
+ * Updated by JCasGen Mon Oct 28 14:09:53 EDT 2013
  * XML source: C:/Users/Lars/git/hw4-lmahler/hw4-lmahler/src/main/resources/descriptors/typesystems/VectorSpaceTypes.xml
  * @generated */
 public class Document extends Annotation {
@@ -66,14 +66,14 @@ public class Document extends Annotation {
   //*--------------*
   //* Feature: relevanceValue
 
-  /** getter for relevanceValue - gets 
+  /** getter for relevanceValue - gets relevance value (99=query, 1=correct answer, 0=incorrect answer)
    * @generated */
   public int getRelevanceValue() {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_relevanceValue == null)
       jcasType.jcas.throwFeatMissing("relevanceValue", "edu.cmu.lti.f13.hw4.hw4_lmahler.typesystems.Document");
     return jcasType.ll_cas.ll_getIntValue(addr, ((Document_Type)jcasType).casFeatCode_relevanceValue);}
     
-  /** setter for relevanceValue - sets  
+  /** setter for relevanceValue - sets relevance value (99=query, 1=correct answer, 0=incorrect answer) 
    * @generated */
   public void setRelevanceValue(int v) {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_relevanceValue == null)
@@ -84,14 +84,14 @@ public class Document extends Annotation {
   //*--------------*
   //* Feature: queryID
 
-  /** getter for queryID - gets 
+  /** getter for queryID - gets query ID
    * @generated */
   public int getQueryID() {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_queryID == null)
       jcasType.jcas.throwFeatMissing("queryID", "edu.cmu.lti.f13.hw4.hw4_lmahler.typesystems.Document");
     return jcasType.ll_cas.ll_getIntValue(addr, ((Document_Type)jcasType).casFeatCode_queryID);}
     
-  /** setter for queryID - sets  
+  /** setter for queryID - sets query ID 
    * @generated */
   public void setQueryID(int v) {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_queryID == null)
@@ -102,14 +102,14 @@ public class Document extends Annotation {
   //*--------------*
   //* Feature: text
 
-  /** getter for text - gets 
+  /** getter for text - gets raw text of document (query or answer)
    * @generated */
   public String getText() {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_text == null)
       jcasType.jcas.throwFeatMissing("text", "edu.cmu.lti.f13.hw4.hw4_lmahler.typesystems.Document");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Document_Type)jcasType).casFeatCode_text);}
     
-  /** setter for text - sets  
+  /** setter for text - sets raw text of document (query or answer) 
    * @generated */
   public void setText(String v) {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_text == null)
@@ -120,14 +120,14 @@ public class Document extends Annotation {
   //*--------------*
   //* Feature: tokenList
 
-  /** getter for tokenList - gets 
+  /** getter for tokenList - gets list of tokens (excluding stopwords) found within the document
    * @generated */
   public FSList getTokenList() {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_tokenList == null)
       jcasType.jcas.throwFeatMissing("tokenList", "edu.cmu.lti.f13.hw4.hw4_lmahler.typesystems.Document");
     return (FSList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Document_Type)jcasType).casFeatCode_tokenList)));}
     
-  /** setter for tokenList - sets  
+  /** setter for tokenList - sets list of tokens (excluding stopwords) found within the document 
    * @generated */
   public void setTokenList(FSList v) {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_tokenList == null)

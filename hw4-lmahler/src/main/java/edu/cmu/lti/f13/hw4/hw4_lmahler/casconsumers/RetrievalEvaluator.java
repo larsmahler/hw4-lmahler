@@ -22,7 +22,10 @@ import edu.cmu.lti.f13.hw4.hw4_lmahler.typesystems.Token;
 import edu.cmu.lti.f13.hw4.hw4_lmahler.utils.Utils;
 
 
-
+/**
+* Computes cosine similarity, and ranks sentences based on their cosine similarity. 
+* After performing the ranking, this component evaluates performance using the MRR metric.
+ */
 public class RetrievalEvaluator extends CasConsumer_ImplBase {
 
 	/** query id number **/
@@ -122,13 +125,11 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 
 		super.collectionProcessComplete(arg0);
 
-		Integer currQId;
 		Map<String, Integer> currQueryVector = null;
     Map<String, Integer> currAnswerVector = null;
     //Compute cosine similarity measure
     for (ProcessedDocument q : pdList) {
       if (q.relevantNum == 99) {
-        currQId = q.queryId;
         currQueryVector = q.tokenVector;
 
         for (ProcessedDocument a : pdList){
@@ -147,7 +148,6 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
     for (ProcessedDocument q : pdList) {
       int rank = 0;
       if (q.relevantNum == 99) {
-        currQId = q.queryId;
         rank = 1;
         System.out.println("\nQuestion: " + q.queryId);
         
